@@ -2,7 +2,6 @@
     public enum TypeRelationship {
         Ordinary,
         Advantage,
-        Disadvantage,
-        NoEffect
+        Disadvantage
     }
 }
