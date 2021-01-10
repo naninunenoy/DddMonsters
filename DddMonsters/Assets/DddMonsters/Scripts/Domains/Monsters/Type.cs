@@ -1,5 +1,8 @@
 ﻿namespace DddMonsters.Domains {
-    public class Type {
-        
+    public enum Type {
+        Normal,
+        Fire,
+        Water,
+        Leaf
     }
 }
