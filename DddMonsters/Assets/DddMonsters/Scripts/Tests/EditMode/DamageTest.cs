@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using DddMonsters.Domains;
+using DddMonsters.Domains.Battle;
 
 namespace DddMonsters.Tests.EditMode {
     public class DamageTest {
@@ -46,6 +47,21 @@ namespace DddMonsters.Tests.EditMode {
             Assert.That(x, Is.EqualTo(2.0F));
             x = TypeRelationship.Disadvantage.ToDamageFactor();
             Assert.That(x, Is.EqualTo(0.5F));
+        }
+
+        [Test]
+        public void ダメージ分HPが減る() {
+            var hp0 = new HitPoint(100);
+            var dmg = new Damage(60);
+            var hp1 = dmg.GetDamagedHitPoint(hp0);
+            Assert.That(hp1.value, Is.EqualTo(40));
+        }
+        [Test]
+        public void ダメージがオーバーしてもHPはマイナスにならない() {
+            var hp0 = new HitPoint(100);
+            var dmg = new Damage(9999);
+            var hp1 = dmg.GetDamagedHitPoint(hp0);
+            Assert.That(hp1.value, Is.Not.Negative);
         }
     }
 }
