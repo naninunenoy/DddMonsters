@@ -5,18 +5,18 @@
         static readonly ITypeRelationshipJudge water = new WaterRelationshipJudge();
         static readonly ITypeRelationshipJudge leaf = new LeafRelationshipJudge();
 
-        public static TypeRelationship Calculate(Type mine, Type others) {
-            switch (mine) {
+        public static TypeRelationship Calculate(Type attacker, Type beAttacked) {
+            switch (attacker) {
             case Type.Normal:
-                return normal.Judge(others);
+                return normal.Judge(beAttacked);
             case Type.Fire:
-                return fire.Judge(others);
+                return fire.Judge(beAttacked);
             case Type.Water:
-                return water.Judge(others);
+                return water.Judge(beAttacked);
             case Type.Leaf:
-                return leaf.Judge(others);
+                return leaf.Judge(beAttacked);
             default:
-                throw new System.ArgumentOutOfRangeException(nameof(mine), mine, null);
+                throw new System.ArgumentOutOfRangeException(nameof(attacker), attacker, null);
             }
         }
     }
