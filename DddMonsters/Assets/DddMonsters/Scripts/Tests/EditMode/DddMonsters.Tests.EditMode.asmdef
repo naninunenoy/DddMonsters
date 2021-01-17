@@ -2,9 +2,11 @@
     "name": "DddMonsters.Tests.EditMode",
     "rootNamespace": "DddMonsters.Tests.EditMode",
     "references": [
-        "GUID:27619889b8ba8c24980f49ee34dbb44a",
-        "GUID:0acc523941302664db1f4e527237feb3",
-        "GUID:0994ad30e749e0d49b2176963e8a97c7"
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "DddMonsters.Domains",
+        "DddMonsters.Domains.Monsters",
+        "DddMonsters.Domains.Battle"
     ],
     "includePlatforms": [
         "Editor"

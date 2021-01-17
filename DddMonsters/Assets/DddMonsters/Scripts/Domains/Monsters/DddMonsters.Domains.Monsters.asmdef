@@ -1,6 +1,6 @@
 {
-    "name": "DddMonsters.Domains",
-    "rootNamespace": "DddMonsters.Domains",
+    "name": "DddMonsters.Domains.Monsters",
+    "rootNamespace": "DddMonsters.Domains.Monsters",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -10,5 +10,5 @@
     "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
-    "noEngineReferences": true
+    "noEngineReferences": false
 }
